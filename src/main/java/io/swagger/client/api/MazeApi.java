@@ -168,7 +168,7 @@ public class MazeApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/maze/enter";
+        String localVarPath = "/api/mazes/enter";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -395,10 +395,11 @@ public class MazeApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/maze/move/down";
+        String localVarPath = "/api/maze/move";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        localVarQueryParams.addAll(apiClient.parameterToPair("direction", "Down"));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -508,10 +509,11 @@ public class MazeApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/maze/move/left";
+        String localVarPath = "/api/maze/move";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        localVarQueryParams.addAll(apiClient.parameterToPair("direction", "Left"));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -621,10 +623,11 @@ public class MazeApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/maze/move/right";
+        String localVarPath = "/api/maze/move";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        localVarQueryParams.addAll(apiClient.parameterToPair("direction", "Right"));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -734,9 +737,11 @@ public class MazeApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/maze/move/up";
+        String localVarPath = "/api/maze/move";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        localVarQueryParams.addAll(apiClient.parameterToPair("direction", "Up"));
+
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
