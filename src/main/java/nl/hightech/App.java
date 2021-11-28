@@ -18,8 +18,11 @@ public class App {
         defaultApiClient.addDefaultHeader("Authorization", "HTI Thanks You [7c45]");
 
         PlayerApi playerApi = new PlayerApi();
+        System.out.println("Forgetting player...");
+        playerApi.forget();
+
         System.out.println("About to register...");
-        playerApi.register("Amazing Player");
+        playerApi.register("Roido");
 
         MazesApi mazesApi = new MazesApi();
         System.out.println("About to obtain all mazes...");

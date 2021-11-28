@@ -703,7 +703,7 @@ public class ApiClient {
         }
 
         String contentType = response.headers().get("Content-Type");
-        if (contentType == null) {
+        if (contentType == null || contentType.equals("text/json; charset=utf-8")) {
             // ensuring a default content type
             contentType = "application/json";
         }
