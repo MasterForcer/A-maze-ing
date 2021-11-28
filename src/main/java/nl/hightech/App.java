@@ -28,12 +28,17 @@ public class App {
         System.out.println("About to obtain all mazes...");
         List<MazeInfo> allMazes = mazesApi.all();
 
-        for (MazeInfo mazeInfo : allMazes) {
-            System.out.println(
-                String.format("%s has a potential reward of %d and contains %d tiles;", mazeInfo.getName(), mazeInfo.getPotentialReward(), mazeInfo.getTotalTiles())
-            );
-        }
+        // Prints all the mazes
+        printMazes(allMazes);
 
         new Scanner(System.in).nextLine();
+    }
+
+    private static void printMazes(List<MazeInfo> mazes) {
+        for (MazeInfo mazeInfo : mazes) {
+            System.out.println(
+                    String.format("%s has a potential reward of %d and contains %d tiles;", mazeInfo.getName(), mazeInfo.getPotentialReward(), mazeInfo.getTotalTiles())
+            );
+        }
     }
 }
