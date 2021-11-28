@@ -3,6 +3,7 @@ package nl.hightech;
 import io.swagger.client.ApiClient;
 import io.swagger.client.ApiException;
 import io.swagger.client.Configuration;
+import io.swagger.client.api.MazeApi;
 import io.swagger.client.api.MazesApi;
 import io.swagger.client.api.PlayerApi;
 import io.swagger.client.model.MazeInfo;
@@ -14,7 +15,7 @@ public class App {
 
     public static void main( String[] args ) throws ApiException {
         ApiClient defaultApiClient = Configuration.getDefaultApiClient();
-        defaultApiClient.setBasePath("https://maze.hightechict.nl/");
+        defaultApiClient.setBasePath("https://maze.hightechict.nl");
         defaultApiClient.addDefaultHeader("Authorization", "HTI Thanks You [7c45]");
 
         PlayerApi playerApi = new PlayerApi();
@@ -30,6 +31,14 @@ public class App {
 
         // Prints all the mazes
         printMazes(allMazes);
+
+
+        // Solve each maze
+        MazeSolver mazeSolver = new MazeSolver();
+        for (MazeInfo mazeInfo : allMazes) {
+            mazeSolver.setMaze(mazeInfo);
+            mazeSolver.solveMaze();
+        }
 
         new Scanner(System.in).nextLine();
     }
